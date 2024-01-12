@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, New World!");
+﻿using System.Net.NetworkInformation;
+using System.Text;
+using HelloCsharp;
+
+PingService pingService = new PingService();
+
+var response = pingService.SendPing();
+
+Console.WriteLine(response);
